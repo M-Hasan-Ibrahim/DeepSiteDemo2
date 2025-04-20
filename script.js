@@ -73,7 +73,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
                 option.textContent = 'No custom quizzes available';
                 option.disabled = true;
                 customQuizSelect.appendChild(option);
-                startQuizBtn.disabled = true;
+                //startQuizBtn.disabled = true;
             } else {
                 customQuizzes.forEach((quiz, index) => {
                     const option = document.createElement('option');
@@ -81,7 +81,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
                     option.textContent = quiz.title;
                     customQuizSelect.appendChild(option);
                 });
-                startQuizBtn.disabled = false;
+                //startQuizBtn.disabled = false;
             }
         }
 
@@ -90,7 +90,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
             
             // Show loading state
             startQuizBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Loading...';
-            startQuizBtn.disabled = true;
+            //startQuizBtn.disabled = true;
             
             try {
                 if (source === 'api') {
@@ -128,7 +128,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
                 console.error('Error loading questions:', error);
                 alert('An error occurred: ' + error.message);
                 startQuizBtn.innerHTML = 'Start Quiz <i class="fas fa-play ml-2"></i>';
-                startQuizBtn.disabled = false;
+                //startQuizBtn.disabled = false;
             }
         }
 
@@ -289,7 +289,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
                 
                 // Reset start button
                 startQuizBtn.innerHTML = 'Start Quiz <i class="fas fa-play ml-2"></i>';
-                startQuizBtn.disabled = false;
+                //startQuizBtn.disabled = false;
             }
         }
 
